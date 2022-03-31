@@ -35,15 +35,15 @@ function hover() {
 }
 
 
-// clear hover effect 
+// clear hover effect and send prompt for grid size
 
 function clear() {
     let clear = document.querySelector('.clear')
 
 
     clear.addEventListener('click', () => {
-
-        container.textContent = ("")
+        //clear grid container and while loop to send prompt if out of range
+        container.textContent = ""
         let size = prompt("Enter Grid size (Maximum 100)")
         while (size < 1 || size > 100) {
             size = prompt("Out of Range, Maximum 100")
@@ -54,7 +54,6 @@ function clear() {
         });
 
     });
-
 
 
 }

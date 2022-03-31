@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+
+}
+
+.grid{
+    border: 1px solid black;
+}
+
+.hover{
+    background-color: black;
+}

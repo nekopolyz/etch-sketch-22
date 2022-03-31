@@ -3,6 +3,7 @@ const container = document.querySelector('.container')
 
 // CreateGrid function
 
+
 function createGrid(size) {
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -15,7 +16,10 @@ function createGrid(size) {
     hover()
 
 }
+
 createGrid(16)
+
+
 
 
 // change color when mouse enter divs
@@ -35,11 +39,23 @@ function hover() {
 
 function clear() {
     let clear = document.querySelector('.clear')
+
+
     clear.addEventListener('click', () => {
+
+        container.textContent = ("")
+        let size = prompt("Enter Grid size (Maximum 100)")
+        while (size < 1 || size > 100) {
+            size = prompt("Out of Range, Maximum 100")
+        }
+        createGrid(size)
         grid.forEach((grid) => {
             grid.classList.remove("hover");
         });
+
     });
+
+
 
 }
 

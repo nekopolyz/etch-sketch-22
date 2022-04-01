@@ -27,11 +27,19 @@ createGrid(16)
 function hover() {
     grid = document.querySelectorAll('.grid')
     grid.forEach((grid) => {
+    let opacity = 50;    
         grid.addEventListener('mouseover', () => {
             grid.classList.add("hover");
+            opacity-=5;
+            grid.style.background = `hsl(${randomColor()}, +${randomColor()}%, ${opacity}%)`
+          
         });
     });
 
+}
+function randomColor(){
+	let color = Math.floor(Math.random() * 256);
+	return color;
 }
 
 
